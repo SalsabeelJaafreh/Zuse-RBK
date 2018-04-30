@@ -16,7 +16,7 @@ import AboutUs from './AboutUs.jsx';
 import Products from './Products.jsx';
 import Contact from './Contact.jsx';
 import DidYouKnow from './DidYouKnow.jsx';
-
+import Videos from './Videos.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -27,7 +27,8 @@ dataa:"",
 showAboutUsComponent:false,
 showProductsComponent:false,
 showContactComponent:false,
-showMainComponent:true
+showMainComponent:true,
+showVideosComponent:false,
 };
 
 this.showSignup=this.showSignup.bind(this);
@@ -46,7 +47,8 @@ showNav(e){
     showDidYouKnowComponent:false,
     showProductsComponent:false,
     showContactComponent:false,
-    showMainComponent:false
+    showMainComponent:false,
+    //showVideosComponent:false,
   })
   this.setState({
     [e.target.name]: true
@@ -88,6 +90,9 @@ render() {
     <li><a href="#" name="showProductsComponent" onClick={this.showNav}>Products</a></li>
 
     <li><a href="#" name="showContactComponent" onClick={this.showNav}>Contact</a></li>
+
+    <li><a href="#" name="showVideosComponent" onClick={this.showNav}>Videos</a></li>
+    
     </ul>
   {/*Router is needed so it can route to different components depending on the link(ex:Sign up here)the user clicked on*/} 
   <ul className="nav navbar-nav navbar-right" >
@@ -107,20 +112,16 @@ render() {
   {this.state.showAboutUsComponent ? <AboutUs/>:null }
   {this.state.showDidYouKnowComponent ? <DidYouKnow/>:null }
   {this.state.showProductsComponent? <Products/>: null}
-
-
+  {this.state.showVideosComponent ? <Videos/>: null}
   </div>
-
   );
  }
  else{
   return (
     <Router history={browserHistory}>
     <Switch>
-
     <Route path="/Signup" component={Signup}/>
     <Route path="/Login" component={Login}/>
-
     </Switch>
     </Router>
     )
