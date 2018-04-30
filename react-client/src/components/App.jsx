@@ -15,6 +15,8 @@ import Login from './Login.jsx';
 import AboutUs from './AboutUs.jsx';
 import Products from './Products.jsx';
 import Contact from './Contact.jsx';
+import DidYouKnow from './DidYouKnow.jsx';
+
 
 class App extends Component {
   constructor(props) {
@@ -41,6 +43,7 @@ showSignup() {
 showNav(e){
   this.setState({
     showAboutUsComponent:false,
+    showDidYouKnowComponent:false,
     showProductsComponent:false,
     showContactComponent:false,
     showMainComponent:false
@@ -80,6 +83,8 @@ render() {
     <li>  <a className="navbar-brand" href="#"name="showMainComponent" onClick={this.showNav}>Main</a></li>
     <li ><a href='#' name="showAboutUsComponent" onClick={this.showNav}>AboutUs</a></li>
 
+     <li ><a href='#' name="showDidYouKnowComponent" onClick={this.showNav}>DidYouKnow</a></li>
+
     <li><a href="#" name="showProductsComponent" onClick={this.showNav}>Products</a></li>
 
     <li><a href="#" name="showContactComponent" onClick={this.showNav}>Contact</a></li>
@@ -100,6 +105,7 @@ render() {
   {this.state.showMainComponent ? <Main/>:null}
   {this.state.showContactComponent ? <Contact/>:null}
   {this.state.showAboutUsComponent ? <AboutUs/>:null }
+  {this.state.showDidYouKnowComponent ? <DidYouKnow/>:null }
   {this.state.showProductsComponent? <Products/>: null}
 
 
