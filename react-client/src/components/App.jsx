@@ -48,7 +48,7 @@ showNav(e){
     showProductsComponent:false,
     showContactComponent:false,
     showMainComponent:false,
-    //showVideosComponent:false,
+    showVideosComponent:false,
   })
   this.setState({
     [e.target.name]: true
