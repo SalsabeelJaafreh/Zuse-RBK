@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import { Button } from 'react-bootstrap';
 
 class SuggestionList extends Component {
   constructor(props) {
@@ -39,21 +40,27 @@ class SuggestionList extends Component {
 
     {this.props.suggestions.map(suggestion =>
       <span className="border border-primary">
-      <div id='table2'>
-      <div id ='table'id="suggestionPre">
-      <p className="pad">{suggestion.name+": "+suggestion.content}
+      <div >
+      <div className="fon">
 
-      </p>
-
+        <div className="panel panel-success fon">
+          <div className="panel-heading">
+            <h3 className="panel-title">{suggestion.name}</h3>
+          </div>
+          <div className="panel-body">
+            {suggestion.content}
+          </div>
+        </div>
 
       </div>
 
       <div className="counter">
           <p className="text-right"> likes {suggestion.count}</p>
           <div>
-            <button id='like' type="button" onClick={()=> this.submit(suggestion._id,suggestion.count-1)}>👎Unlike</button>
-            <button id='like' type="button" onClick={()=> this.submit(suggestion._id,suggestion.count+1)}>❤️Like</button>
-
+            <Button id='like' className="btn btn-info" onClick={()=> this.submit(suggestion._id,suggestion.count+1)}>❤️Like</Button>
+            <Button id='like' className="btn btn-danger" onClick={()=> this.submit(suggestion._id,suggestion.count-1)}>👎Unlike</Button>
+              <br></br>
+            <br></br>
           </div>
 
 

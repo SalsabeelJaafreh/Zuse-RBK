@@ -2,7 +2,7 @@
 import React from 'react';
 
 const AboutUs = (props) => (
-	<div  className="container-fluid" styleName="font-family: 'Dosis', sans-serif;">
+	<div  className="container-fluid" styleName="font-family: 'Armata', sans-serif;">
 	<div id='AboutUs' align="center">
 	<h1>About Us</h1>
 	<p >Some years back, nobody paid much attention to the accumulation of waste
