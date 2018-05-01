@@ -2,18 +2,23 @@
 import React from 'react';
 //to work in ajax
 import $ from 'jquery';
-
-//the style for the main header
-const header1={
+//the style for the header
+const header={
   color:'black',
   fontWeight:'bold',
   textAlign:'center',
   fontSize:'50px',
   fontFamily: 'Lobster',
-  marginTop:'2px',
 };
-//the style for retrieve one patient
-const header3={
+//the style for the title
+const title={
+  color:'red',
+  fontWeight:'bold',
+  textAlign:'center',
+  fontSize:'25px',
+};
+//the style for the video
+const video={
   color:'black',
   fontWeight:'bold',
   textAlign:'centezr',
@@ -22,8 +27,8 @@ const header3={
   marginTop:'5px',
   marginLeft: '200px',
 };
-//style for input retrieve one patient
-const input3={
+//style for the div
+const div={
   padding: '10px 10px 10px 10px',
   marginRight: '-80px',
   marginLeft: '-30px',
@@ -32,70 +37,7 @@ const input3={
   border: '2px solid black',
   borderRadius: '15px',
 };
-//the style for the button retrieve one patient
-const button3={
-  padding:'6px',
-  backgroundColor: '#123456',
-  color: 'white',
-  border: '2px solid black',
-  fontSize:'20px',
-  borderRadius: '15px',
-  fontFamily: 'Lobster',
-};
-//style for th / the const thing
-const table={
-    border: '3px solid black',
-    borderCollapse: 'collapse',
-    padding: '3px',
-    textAlign : 'center',
-    fontSize:'25px',
-    fontWeight:'bold',
-    color:'black',
-    backgroundColor: 'white',
-}
-//style for td / the changed thing
-const table2={
-    border: '3px solid black',
-    borderCollapse: 'collapse',
-    padding: '3px',
-    textAlign : 'center',
-    fontSize:'25px',
-    //fontWeight:'bold',
-    color:'white',
-    backgroundColor: 'gray',
-
-}
-//the style for the button logout
-const button1={
-  padding:'5px',
-  //this three to make it center
-  display: 'block',
-  marginRight: 'auto',
-  marginLeft: 'auto',
-  backgroundColor: '#bb280e',
-  color: 'white',
-  border: '2px solid #bb280e',
-  marginTop:'5px',
-  fontSize:'20px',
-  borderRadius: '10px',
-  fontFamily: 'Lobster',
-};
-//the style for the button create new patient
-const button2={
-  padding:'5px',
-  //this three to make it center
-  display: 'block',
-  marginRight: 'auto',
-  marginLeft: 'auto',
-  backgroundColor: '#123456',
-  color: 'white',
-  border: '2px solid #123456',
-  marginTop:'0px',
-  fontSize:'20px',
-  borderRadius: '10px',
-  fontFamily: 'Lobster',
-};
-//the page home what inside render
+//the page vidoes what inside render
 class Videos extends React.Component {
   constructor(){
     super();
@@ -113,7 +55,7 @@ class Videos extends React.Component {
       'https://www.youtube.com/watch?v=La3EWG5r5rQ',
       'https://www.youtube.com/watch?v=xEAOvFG1AmM',
       ],
-      videosTitle=[
+      videosTitle:[
       'THE 25 BEST RECYCLING HACKS EVER',
       '28 WAYS TO RECYCLE NEARLY ANYTHING AROUND YOU',
       '26 EASY WAYS TO RECYCLE ANYTHING',
@@ -123,14 +65,39 @@ class Videos extends React.Component {
       '25 MOST AMAZING WAYS TO RECYCLE PLASTIC BOTTLES',
       '22 MOST CREATIVE WAYS TO REUSE PLASTIC BOTTLES',
       '25 PLASTIC BOTTLE HACKS AND DIYs',
-      '38 Ideas with Plastic Bottles',
+      '38 IDEAS WITH PLASTIC BOTTLES',
       ],
     };
-  }
+  };
+  //function to render the videos
+  showVidoes() {
+    var that=this
+    // for (var i = 0; i < that.state.videosLink.length; i++) {
+      console.log("that.state.videosLink")
+    // }
+    //$('.geneticDisease').html(data.genetic_Diseases);
+  };
+  //call showVidoes automaticlly
   render () {
     return (
-      <div1>
-        <h2 style={header1}>Here you can find some idea to <br/> Recycle many thing in your home</h2>
+      <div1 >
+        <h2 style={header}>Here you can find some idea to 
+        <br/> Recycle many thing in your home</h2>
+          {this.state.videosTitle.map((videoTitle, index)=>{ 
+            return<div2>
+                    <div3 align='right'>
+                      <h style={title} key={index}>{videoTitle} </h>
+                      <br/> 
+                      <video style={title} width="320" height="240" controls>
+                        <source src={this.state.videosLink[0]}/>
+                        Your browser does not support the video tag.
+                      </video>
+                    </div3>
+                    <br/>
+                  </div2>
+
+          })}
+     
       </div1>
     )
   }
@@ -139,6 +106,11 @@ class Videos extends React.Component {
 export default Videos;
 
 /*
+        {this.state.videosLink.map(videosLink => <h> {this.state.videosLink}</h>)}
+
+
+
+  
 
 
 */
