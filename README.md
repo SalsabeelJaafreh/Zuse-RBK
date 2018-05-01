@@ -46,7 +46,7 @@ in another terminal npm run react-dev
 
 ### Roadmap
 
-View the project roadmap [here](https://github.com/Zuse-RBK/Zuse-RBK/issues)
+View the project roadmap [here](https://github.com/RBK-invoker/Zuse-RBK/issues)
 
 
 ## Contributing
