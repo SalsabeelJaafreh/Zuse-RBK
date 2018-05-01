@@ -45,4 +45,4 @@ Recycling produces considerably less carbon, which reduces the amount of unhealt
   > we expect a really helpfull experience with your app 
 
 ## Closing and Call to Action ##
-  > don't hesitate and go now for -------------------------------// app address 
+  > don't hesitate and go now for: https://second-hand-store.herokuapp.com/ (the app address) 
