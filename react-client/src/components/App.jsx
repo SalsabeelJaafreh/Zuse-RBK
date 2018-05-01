@@ -28,6 +28,7 @@ showAboutUsComponent:false,
 showProductsComponent:false,
 showContactComponent:false,
 showMainComponent:true,
+showDidYouKnowComponent:false,
 showVideosComponent:false,
 };
 
@@ -78,9 +79,9 @@ render() {
     <div className="collapse navbar-collapse" id="myNavbar">
     <ul className="nav navbar-nav">
     <li>  <a className="navbar-brand" href="#"name="showMainComponent" onClick={this.showNav}>Main</a></li>
-    <li ><a href='#' name="showAboutUsComponent" onClick={this.showNav}>AboutUs</a></li>
+    <li ><a href='#' name="showAboutUsComponent" onClick={this.showNav}>About us</a></li>
 
-     <li ><a href='#' name="showDidYouKnowComponent" onClick={this.showNav}>DidYouKnow</a></li>
+     <li ><a href='#' name="showDidYouKnowComponent" onClick={this.showNav}>Did you know</a></li>
 
     <li><a href="#" name="showProductsComponent" onClick={this.showNav}>Products</a></li>
 
