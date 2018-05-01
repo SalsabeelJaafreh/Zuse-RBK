@@ -6,7 +6,11 @@
   "scripts": {
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/index.js",
+<<<<<<< HEAD
     "j": "webpack -d --watch | nodemon server/index.js"
+=======
+    "dev":"webpack -d --watch | nodemon server/index.js"
+>>>>>>> added styles
   },
   "author": "Beth Johnson",
   "license": "ISC",
@@ -19,6 +23,7 @@
     "webpack-cli": "^2.0.14"
   },
   "dependencies": {
+    "async": "^2.6.0",
     "bcrypt": "^2.0.1",
     "bcrypt-nodejs": "0.0.3",
     "bluebird": "^3.3.4",
@@ -27,7 +32,10 @@
     "express": "^4.15.0",
     "express-session": "^1.15.6",
     "jquery": "^3.1.1",
-    "mongoose": "^4.8.6",
+    "mongoose": "^4.13.12",
+    "nodemailer": "^4.6.4",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router": "^4.2.0",
