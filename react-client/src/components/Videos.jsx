@@ -12,20 +12,25 @@ const header={
 };
 //the style for the title
 const title={
-  color:'red',
+  color:'#149c82',
   fontWeight:'bold',
   textAlign:'center',
   fontSize:'25px',
+  display: 'block',
+  marginRight: 'auto',
+  marginLeft: 'auto',
 };
 //the style for the video
 const video={
   color:'black',
   fontWeight:'bold',
-  textAlign:'centezr',
+  textAlign:'center',
   fontSize:'25px',
   fontFamily: 'Lobster',
-  marginTop:'5px',
-  marginLeft: '200px',
+  display: 'block',
+  marginRight: 'auto',
+  marginLeft: 'auto',
+  border:'5px green solid'
 };
 //style for the div
 const div={
@@ -44,16 +49,16 @@ class Videos extends React.Component {
     //all the videos title and link
     this.state={
       videosLink:[
-      'https://www.youtube.com/watch?v=3ETqGos67wQ',
-      'https://www.youtube.com/watch?v=YCiN3aAaIC0',
-      'https://www.youtube.com/watch?v=njkg80wZZIM',
-      'https://www.youtube.com/watch?v=AVYOASw03sY',
-      'https://www.youtube.com/watch?v=LgSBMKlWtVE',
-      'https://www.youtube.com/watch?v=nN5DG309oYc',
-      'https://www.youtube.com/watch?v=LgSBMKlWtVE',
-      'https://www.youtube.com/watch?v=nN5DG309oYc',
-      'https://www.youtube.com/watch?v=La3EWG5r5rQ',
-      'https://www.youtube.com/watch?v=xEAOvFG1AmM',
+      'https://www.youtube.com/embed/3ETqGos67wQ?autoplay=1&mute=1',
+      'https://www.youtube.com/embed/YCiN3aAaIC0?autoplay=1&mute=1',
+      'https://www.youtube.com/embed/njkg80wZZIM?autoplay=1&mute=1',
+      'https://www.youtube.com/embed/AVYOASw03sY?autoplay=1&mute=1',
+      'https://www.youtube.com/embed/LgSBMKlWtVE?autoplay=1&mute=1',
+      'https://www.youtube.com/embed/nN5DG309oYc?autoplay=1&mute=1',
+      'https://www.youtube.com/embed/LgSBMKlWtVE?autoplay=1&mute=1',
+      'https://www.youtube.com/embed/nN5DG309oYc?autoplay=1&mute=1',
+      'https://www.youtube.com/embed/La3EWG5r5rQ?autoplay=1&mute=1',
+      'https://www.youtube.com/embed/xEAOvFG1AmM?autoplay=1&mute=1',
       ],
       videosTitle:[
       'THE 25 BEST RECYCLING HACKS EVER',
@@ -69,51 +74,27 @@ class Videos extends React.Component {
       ],
     };
   };
-  //function to render the videos
-  showVidoes() {
-    var that=this
-    // for (var i = 0; i < that.state.videosLink.length; i++) {
-      console.log("that.state.videosLink")
-    // }
-    //$('.geneticDisease').html(data.genetic_Diseases);
-  };
-  //call showVidoes automaticlly
   render () {
     return (
       <div1 >
         <h2 style={header}>Here you can find some idea to 
-        <br/> Recycle many thing in your home</h2>
-          {this.state.videosTitle.map((videoTitle, index)=>{ 
-            return<div2>
-                    <div3 align='right'>
-                      <h style={title} key={index}>{videoTitle} </h>
-                      <br/> 
-                      <video style={title} width="320" height="240" controls>
-                        <source src={this.state.videosLink[0]}/>
-                        Your browser does not support the video tag.
-                      </video>
-                    </div3>
-                    <br/>
-                  </div2>
-
-          })}
-     
+          <br/> Recycle many thing in your home</h2>
+        {this.state.videosTitle.map((videoTitle, index)=>{ 
+          return<div2>
+                  <div3 align='right'>
+                    <h style={title} key={index}>{videoTitle}</h>
+                    <br/> 
+                    <iframe style={video} width="400" height="400" src={this.state.videosLink[index]}/>
+                  </div3>
+                  <br/>
+                </div2>
+        })}
       </div1>
     )
   }
 }
 //export this component to can use
-export default Videos;
-
-/*
-        {this.state.videosLink.map(videosLink => <h> {this.state.videosLink}</h>)}
-
-
-
-  
-
-
-*/
+export default Videos;  
 
 
 
