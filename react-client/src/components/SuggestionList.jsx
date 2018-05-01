@@ -5,28 +5,28 @@ import $ from 'jquery';
 class SuggestionList extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       count: 0
     };
-    
+
     this.submit=this.submit.bind(this);
   }
 
 
 
   submit(id,count) {
-    
+
     console.log(count)
-    $.ajax({ 
+    $.ajax({
       type:'PUT',
       url: '/SuggestionList',
       data:{
         id:id,
-        count:count 
+        count:count
       },
       success: (data) => {
        this.props.submitlike(this.props.typelike)
-       
+
      }
    });
   }
@@ -35,31 +35,38 @@ class SuggestionList extends Component {
    return (
 
     <div className="container">
-    
-    {this.props.suggestions.map(suggestion => 
-      <div id='table2'>    
+      <br></br>
 
+    {this.props.suggestions.map(suggestion =>
+      <span className="border border-primary">
+      <div id='table2'>
       <div id ='table'id="suggestionPre">
-      <h1>{suggestion.name}</h1>
-      <pre className="pre">{suggestion.content}</pre>
-      
+      <p className="pad">{suggestion.name+": "+suggestion.content}
+
+      </p>
+
+
       </div>
-      
+
       <div className="counter">
-      <p> likes {suggestion.count}</p>
-      <button id='like' type="button" onClick={()=> this.submit(suggestion._id,suggestion.count+1)}>❤️Like</button>
-      <button id='like' type="button" onClick={()=> this.submit(suggestion._id,suggestion.count-1)}>👎Unlike</button>
-      <br></br>
-      <br></br>
-      <br></br>
-      
+          <p className="text-right"> likes {suggestion.count}</p>
+          <div>
+            <button id='like' type="button" onClick={()=> this.submit(suggestion._id,suggestion.count-1)}>👎Unlike</button>
+            <button id='like' type="button" onClick={()=> this.submit(suggestion._id,suggestion.count+1)}>❤️Like</button>
+
+          </div>
+
 
       </div>
       </div>
-      
+
+</span>
       )}
+      <br></br>
+      <br></br>
+      <br></br>
 
-    
+
     </div>
 
     )
@@ -68,5 +75,3 @@ class SuggestionList extends Component {
 
 
 export default SuggestionList;
-
-

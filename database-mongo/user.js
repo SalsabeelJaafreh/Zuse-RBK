@@ -4,10 +4,13 @@ var Promise = require('bluebird');
 var db = require('./config');
 
 var user = mongoose.Schema({
-  userName: { type : String, required : true },
-  passWord: { type : String, required : true },
-  Email:{ type : String, required : true }
+  userName: { type : String, required : true, unique:true },
+  passWord: { type : String, required : true, unique:true },
+  Email:{ type : String, required : true, unique:true },
+  resetPasswordToken: String,
+  resetPasswordExpires: Date
 });
+
 
 
 var User = mongoose.model('User', user);

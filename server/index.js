@@ -1,10 +1,19 @@
+var session = require('express-session')
+var mongoose = require('mongoose');
+var nodemailer = require('nodemailer');
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+var async = require('async');
+var crypto = require('crypto');
+
 var express = require('express');
 var bodyParser = require('body-parser');
 var database = require('../database-mongo/config.js');
 var app = express();
 
 var handler=require('./request-handler.js');
-var mongoose=require('mongoose');
+
+app.use(session({ secret: 'session secret key' }));
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());

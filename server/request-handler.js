@@ -39,7 +39,7 @@ exports.signupUser = function(req, res) {
       }
     })
     });
-       
+
      }
      else{
       res.status(201).send("")
@@ -59,7 +59,7 @@ exports.signinUser = function(req, res) {
       if (match) {
         data="coreeeeect";
         res.status(201).send(data);
-            console.log("coreeeeect");
+            console.log("signed in");
           } else {
             console.log("innnnncoreeeeect");
             data="";
@@ -144,7 +144,7 @@ exports.showSuggest= function(req, res) {
 exports.updateLikes=function (req, res) {
   console.log(req.body.id)
   console.log("countttt",req.body.count)
-  Suggest.findByIdAndUpdate({_id:req.body.id},{ count: req.body.count}, function (err, data) {
+  Suggest.findByIdAndUpdate({_id:req.body.id},{ count: req.body.count}, {runValidators: true}, function (err, data) {
     if (err){ console.log("errrrrr",err)};
     res.send(data);
   }
@@ -207,24 +207,3 @@ exports.sendMessage=function(req,res){
 exports.logout = function(req, res) {
   res.send("logout");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

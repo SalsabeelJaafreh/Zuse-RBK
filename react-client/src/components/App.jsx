@@ -21,7 +21,7 @@ import Videos from './Videos.jsx';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
 //The code will depend on the data value which will be set through successful ajax to decide what to render.
 dataa:"",
 showAboutUsComponent:false,
@@ -61,14 +61,7 @@ render() {
   if(this.state.dataa==""){
    return (
 
-    <div>
-
-    <div className="jumbotron">
-    <div className="container text-center">
-    <h1>Second Hand Store</h1>      
-    <p>Reduce.Reuse.Recycle</p>
-    </div>
-    </div>
+    <div className="">
 
     <nav className="navbar navbar-inverse">
     <div className="container-fluid">
@@ -76,8 +69,10 @@ render() {
     <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
     <span className="icon-bar"></span>
     <span className="icon-bar"></span>
-    <span className="icon-bar"></span>                        
+    <span className="icon-bar"></span>
     </button>
+
+
 
     </div>
     <div className="collapse navbar-collapse" id="myNavbar">
@@ -94,10 +89,13 @@ render() {
     <li><a href="#" name="showVideosComponent" onClick={this.showNav}>Videos</a></li>
     
     </ul>
-  {/*Router is needed so it can route to different components depending on the link(ex:Sign up here)the user clicked on*/} 
+  {/*Router is needed so it can route to different components depending on the link(ex:Sign up here)the user clicked on*/}
   <ul className="nav navbar-nav navbar-right" >
+
+
   <Router history={browserHistory}>
   <li><Link className="icon-bar"  style={{color: 'white',paddingLeft: 13,textDecoration: 'none'}}  onClick={this.showSignup} to="/Signup">Signup</Link></li>
+
 
   </Router>
   <Router history={browserHistory}>
@@ -107,6 +105,13 @@ render() {
   </div>
   </div>
   </nav>
+  <div className="jumbotron">
+    <div className="container-fluid text-left">
+      <h1 className="font-weight-bold">Second Hand Store</h1>
+        <p>Reduce Reuse Recycle</p>
+      </div>
+    </div>
+
   {this.state.showMainComponent ? <Main/>:null}
   {this.state.showContactComponent ? <Contact/>:null}
   {this.state.showAboutUsComponent ? <AboutUs/>:null }
@@ -128,7 +133,7 @@ render() {
 }
 }
 }
-//The Main componant can be put in different file like the Contact,AboutUs..etc. 
+//The Main componant can be put in different file like the Contact,AboutUs..etc.
 class Main extends Component{
   constructor(props){
     super(props);
@@ -142,12 +147,12 @@ class Main extends Component{
 
   onChange (e) {
     this.setState({
-     [e.target.name]: e.target.value 
+     [e.target.name]: e.target.value
    });
   }
   //data is stored in suggest schema which is the input value in Profile.jsx
   submit(type) {
-    $.ajax({ 
+    $.ajax({
       type:'POST',
       url: '/suggestions',
       data:{
@@ -166,28 +171,29 @@ class Main extends Component{
     return(
       <div>
       <div class="container">
-      <center>
+
       <form>
-      <div class="form-group">
-      <label for="sel1">Material Type</label>
-      <br></br>
-      <br></br>
-      <select class="form-control" id="sel1" id='select' onChange={this.onChange} value={this.state.type} name="type">
+      <div className="float form-group container-fluid text-center">
+      <label for="sel1">Choose one of the material types:</label>
+
+      <select className="form-control container-fluid" id="sel1"
+        id='select' onChange={this.onChange} value={this.state.type} name="type">
       <option value="type">type</option>
-      <option value="plastic">plastic</option>
-      <option value="clothes">clothes</option>
-      <option value="wood">wood</option>
-      <option value="iron">iron</option>
+      <option value="plastic">Plastic</option>
+      <option value="clothes">Clothes</option>
+      <option value="wood">Wood</option>
+      <option value="iron">Iron</option>
       </select>
+
       </div>
       </form>
-      </center>
+
       </div>
       <br></br>
       <br></br>
       <center>
       <button className="btn btn-default"  type="button" onClick={()=> this.submit(this.state.type)}>Show suggestions</button>
-    {/*submitlike and typelike were passed to suggestionList component becuase they were needed in the like button functionality*/} 
+    {/*submitlike and typelike were passed to suggestionList component becuase they were needed in the like button functionality*/}
     <SuggestionList suggestions={this.state.suggestions} submitlike={this.submit} typelike={this.state.type}/>
     </center>
     </div>
