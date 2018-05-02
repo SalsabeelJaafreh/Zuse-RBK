@@ -2,17 +2,18 @@
 import React, { Component } from "react";
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import {Button} from 'react-bootstrap'
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       to:'',
       content:'',
       input:'',
       ismessagehiddin:true
-      
+
     };
-    
+
     this.onChange=this.onChange.bind(this);
     this.showmessagebox=this.showmessagebox.bind(this);
     this.addMessage=this.addMessage.bind(this);
@@ -20,7 +21,7 @@ class Home extends Component {
 
   onChange (e) {
     this.setState({
-     [e.target.name]: e.target.value 
+     [e.target.name]: e.target.value
    });
   }
 
@@ -34,8 +35,8 @@ showmessagebox(to,content){
 }
 
 addMessage(to,content) {
- 
-  $.ajax({ 
+
+  $.ajax({
     type:'POST',
     url: '/Message',
     data:{
@@ -44,7 +45,7 @@ addMessage(to,content) {
      content:content
    },
    success: (data) => {
-     
+
     this.showmessagebox("","");
     this.setState({input:''});
     alert("Your message is sent");
@@ -54,26 +55,26 @@ addMessage(to,content) {
 
 render(){
  return (
-  <div>
-  
-  {this.props.extraa.map(item => 
-   <div className="container" id ='table2'>  
-   <div>  
-   
-   <h1>{item.select}</h1>    
-   <pre className="pre"><b>{item.post}</b></pre>
-   <h2 onClick={()=> this.showmessagebox(item.name,item.post)} >📤{item.name}</h2>
-   </div>
-   <br></br>
-   
+  <div className="container-fluid col-md-offset-0">
+
+  {this.props.extraa.map(item =>
+   <div className="" id ='table2'>
    <div>
 
-   {this.state.ismessagehiddin ? null : (this.state.content==item.post)?<div><textarea id='home' onChange={this.onChange} value={this.state.input} name="input"/><button id='home1' onClick={()=> this.addMessage(this.state.to,this.state.input)}>send</button>  </div>:null}
-   
+   <h1>{"Material Type: "+item.select}</h1>
+   <div className="well gfont"><b>{item.name+": "+item.post}</b></div>
+   <Button onClick={()=> this.showmessagebox(item.name,item.post)} >{"Show/Hide"}</Button>
+   </div>
+   <br></br>
+
+   <div>
+
+   {this.state.ismessagehiddin ? null : (this.state.content==item.post)?<div className="input-group input-group-lg"><input className="form-control"  placeholder="Send a message..." onChange={this.onChange} value={this.state.input} name="input"/><div class="input-group-append"><Button className="btn btn-outline-secondary btn-lg" onClick={()=> this.addMessage(this.state.to,this.state.input)}>Send</Button></div>  </div>:null}
+
    </div>
    </div>
    )}
-  
+
   </div>
 
   )

@@ -112,6 +112,7 @@ class Profile extends Component {
        <div>
        <center>
        <button className="btn btn-primary btn-lg" onClick={this.recieveMessage}>Show Messages</button>
+       <hr className="divider"></hr>
        <table id='tab'>
        <tr>
        <th>
@@ -133,7 +134,7 @@ class Profile extends Component {
        <br></br>
        <br></br>
 
-       <button className="btn btn-primary btn-lg" onClick={()=> this.submit(this.state.select,this.state.post)}>post</button>
+       <button className="btn btn-primary btn-lg" onClick={()=> this.submit(this.state.select,this.state.post)}>✉ Post</button>
        </div>
        </th>
        <th>
@@ -154,22 +155,23 @@ class Profile extends Component {
        </textarea>
        <br></br>
        <br></br>
-       <Button  className="btn btn-primary btn-lg" onClick={()=> this.addsuggest(this.state.type,this.state.content)}>suggest</Button>
+       <Button  className="btn btn-primary btn-lg" onClick={()=> this.addsuggest(this.state.type,this.state.content)}>✍ Suggest</Button>
        </div>
        </th>
        </tr>
        </table>
        <center>
-       <h1>My Inventory</h1> </center>
+       <h1>My posts:</h1>
+    </center>
        <div className="container" id ='table2'>
 
        <div className="container">
        {this.props.userPosts.map(item =>
          <div>
          <center>
-         <h2>{item.select}</h2>
-         <pre className="pre">{item.post}</pre>
-         <button onClick={()=> this.deletepost(item._id)}>🗑 delete From Home</button>
+         <h2>{"Type of Material: "+item.select}</h2>
+         <div className="well">{item.post}</div>
+         <Button className="btn btn-primary btn-lg" onClick={()=> this.deletepost(item._id)}>🗑 delete From Home</Button>
          <br></br>
          <br></br>
          <br></br>

@@ -8,7 +8,6 @@ const header={
   fontWeight:'bold',
   textAlign:'center',
   fontSize:'50px',
-  fontFamily: 'Lobster',
 };
 //the style for the title
 const title={
@@ -26,11 +25,9 @@ const video={
   fontWeight:'bold',
   textAlign:'center',
   fontSize:'25px',
-  fontFamily: 'Lobster',
   display: 'block',
   marginRight: 'auto',
   marginLeft: 'auto',
-  border:'5px green solid'
 };
 //style for the div
 const div={
@@ -73,13 +70,13 @@ class Videos extends React.Component {
   render () {
     return (
       <div1 >
-        <h2 style={header}>Here you can find some idea to 
+        <h2 style={header}>Here you can find some idea to
           <br/> Recycle many thing in your home</h2>
-        {this.state.videosTitle.map((videoTitle, index)=>{ 
+        {this.state.videosTitle.map((videoTitle, index)=>{
           return<div2>
                   <div3 align='right'>
                     <h style={title} key={index}>{videoTitle}</h>
-                    <br/> 
+                    <br/>
                     <iframe style={video} width="400" height="400" src={this.state.videosLink[index]}/>
                   </div3>
                   <br/>
@@ -90,13 +87,4 @@ class Videos extends React.Component {
   }
 }
 //export this component to can use
-export default Videos;  
-
-
-
-
-
-
-
-
-
+export default Videos;
