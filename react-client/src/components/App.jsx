@@ -62,7 +62,7 @@ render() {
   if(this.state.dataa==""){
    return (
 
-    <div className="">
+    <div className="gfont">
 
     <nav className="navbar navbar-inverse">
     <div className="container-fluid">
@@ -79,16 +79,13 @@ render() {
     <div className="collapse navbar-collapse" id="myNavbar">
     <ul className="nav navbar-nav">
     <li>  <a className="navbar-brand" href="#"name="showMainComponent" onClick={this.showNav}>Main</a></li>
-    <li ><a href='#' name="showAboutUsComponent" onClick={this.showNav}>About us</a></li>
 
-     <li ><a href='#' name="showDidYouKnowComponent" onClick={this.showNav}>Did you know</a></li>
-
+     <li ><a href='#' name="showDidYouKnowComponent" onClick={this.showNav}>Did You Know</a></li>
     <li><a href="#" name="showProductsComponent" onClick={this.showNav}>Products</a></li>
-
+    <li><a href="#" name="showVideosComponent" onClick={this.showNav}>Videos</a></li>
+    <li ><a href='#' name="showAboutUsComponent" onClick={this.showNav}>About us</a></li>
     <li><a href="#" name="showContactComponent" onClick={this.showNav}>Contact</a></li>
 
-    <li><a href="#" name="showVideosComponent" onClick={this.showNav}>Videos</a></li>
-    
     </ul>
   {/*Router is needed so it can route to different components depending on the link(ex:Sign up here)the user clicked on*/}
   <ul className="nav navbar-nav navbar-right" >
@@ -106,9 +103,9 @@ render() {
   </div>
   </div>
   </nav>
-  <div className="jumbotron">
+  <div className="jumbotron gfont">
     <div className="container-fluid text-left">
-      <h1 className="font-weight-bold">Second Hand Store</h1>
+      <h1 className="">Second Hand Store</h1>
         <p>Reduce Reuse Recycle</p>
       </div>
     </div>
