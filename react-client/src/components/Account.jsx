@@ -11,7 +11,6 @@ import {
 import Home from './Home.jsx';
 import Profile from './Profile.jsx';
 
-
 class Account extends Component {
   constructor(props) {
     super(props);
@@ -81,6 +80,9 @@ render(){
                                   </li>
                                   <li>
                                       <Link to="/Login" onClick={this.Logout} style={{color: 'white',paddingLeft: 13,textDecoration: 'none'}}>Logout</Link>
+                                  </li>
+                                  <li>
+                                      <Link onClick={this.submit} to="/image" style={{color: 'white',paddingLeft: 13,textDecoration: 'none'}}>UploadImage</Link>
                                   </li>
                               </ul>
 

@@ -15,7 +15,8 @@ class Profile extends Component {
       type:'',
       content:'',
       message:[],
-      showInbox:false
+      showInbox:false,
+      // image:"http://s3.amazonaws.com/37assets/svn/765-default-avatar.png"
 
     };
 
@@ -24,6 +25,7 @@ class Profile extends Component {
     this.addsuggest=this.addsuggest.bind(this);
     this.recieveMessage=this.recieveMessage.bind(this);
     this.deletepost=this.deletepost.bind(this);
+    // this.photo=this.photo.bind(this);
   }
 
   onChange (e) {
@@ -95,6 +97,22 @@ class Profile extends Component {
    });
 
   }
+
+// photo(photo){
+//   var x=this
+//   var file=photo.target.files[0]
+//   var fileReader=new FileReader;
+//    fileReader.readAsDataURL(file)
+//    fileReader.onload=function(e){
+  
+//     }
+
+// }
+// };
+
+  
+  
+
 
   render(){
    if(this.state.showInbox){
