@@ -6,9 +6,20 @@
 
 ## Team
 
-  - __Product Owner__: Wa'ed Alshiyyab
-  - __Scrum Master__: Hanan Nouman	
-  - __Development Team Members__: Lena Salamat Yussur Alani 
+  - __Product Owner__: Salsabeel Jaafreh
+  - __Scrum Master__: Mohammad AlRifai
+  - __Development Team Members__: Mohammad Jozaa,Belal Faouri
+
+ 
+ ## Features
+-  Restylying the whole project beacause we think that old style it need to be more colorful.
+-  Added new tab with name "DidYouKnow" that contains alot of info that encourage the user to recycling.
+-  Added new tab with name "videos" that teach the users different ways of recycling items .
+-  Fixing some bugs that related to our features we added likes(route of login ,likes count).
+-  Adding the project name to heroku link.
+
+
+
 
 ## Table of Contents
 
