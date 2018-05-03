@@ -32,14 +32,13 @@ class SuggestionList extends Component {
    });
   }
 
-  render(){
-   return (
+  render(){ return (
 
-    <div className="container">
-      <br></br>
+<div className="container">
+    <br></br>
 
     {this.props.suggestions.map(suggestion =>
-      <span className="border border-primary">
+    <span className="border border-primary">
       <div >
       <div className="fon">
 
@@ -63,22 +62,17 @@ class SuggestionList extends Component {
             <br></br>
           </div>
 
-
       </div>
       </div>
 
-</span>
-      )}
-      <br></br>
-      <br></br>
-      <br></br>
+</span> )}
+    <br></br>
+    <br></br>
+    <br></br>
 
+</div>
 
-    </div>
-
-    )
- }
-}
+) } }
 
 
 export default SuggestionList;
