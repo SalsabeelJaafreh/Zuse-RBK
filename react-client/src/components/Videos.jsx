@@ -67,24 +67,20 @@ class Videos extends React.Component {
       ],
     };
   };
-  render () {
-    return (
-      <div1 >
-        <h2 style={header}>Here you can find some idea to
-          <br/> Recycle many thing in your home</h2>
-        {this.state.videosTitle.map((videoTitle, index)=>{
-          return<div2>
-                  <div3 align='right'>
-                    <h style={title} key={index}>{videoTitle}</h>
-                    <br/>
-                    <iframe style={video} width="400" height="400" src={this.state.videosLink[index]}/>
-                  </div3>
-                  <br/>
-                </div2>
-        })}
-      </div1>
-    )
-  }
-}
+  render () { return (
+<div1>
+    <h2 style={header}>Here you can find some idea to
+          <br/> Recycle many thing in your home</h2> {this.state.videosTitle.map((videoTitle, index)=>{ return
+    <div2>
+        <div3 align='right'>
+            <h style={title} key={index}>{videoTitle}</h>
+            <br/>
+            <iframe style={video} width="400" height="400" src={this.state.videosLink[index]}/>
+        </div3>
+        <br/>
+    </div2>
+    })}
+</div1>
+) } }
 //export this component to can use
 export default Videos;

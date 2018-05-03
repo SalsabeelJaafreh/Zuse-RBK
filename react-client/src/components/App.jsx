@@ -18,6 +18,7 @@ import Contact from './Contact.jsx';
 import DidYouKnow from './DidYouKnow.jsx';
 import Videos from './Videos.jsx';
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -29,7 +30,7 @@ showProductsComponent:false,
 showContactComponent:false,
 showMainComponent:true,
 showDidYouKnowComponent:false,
-showVideosComponent:false,
+showVideosComponent:false
 };
 
 this.showSignup=this.showSignup.bind(this);

@@ -11,7 +11,6 @@ import {
 import Home from './Home.jsx';
 import Profile from './Profile.jsx';
 
-
 class Account extends Component {
   constructor(props) {
     super(props);
@@ -49,71 +48,65 @@ Logout() {
  });
 }
 
-render(){
+render(){ return (
+<div>
 
-  return (
-    <div>
+    <Router>
 
+        <div>
 
+            <nav className="navbar navbar-inverse">
+                <div className="container-fluid">
+                    <div className="navbar-header">
+                        <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span className="icon-bar"></span>
+                            <span className="icon-bar"></span>
+                            <span className="icon-bar"></span>
+                        </button>
 
-      <Router>
+                    </div>
+                    <center>
+                        <div className="collapse navbar-collapse" id="myNavbar">
+                            <ul className="nav navbar-nav">
+                                <li>
+                                    <Link onClick={this.submit} to="/Home" style={{color: 'white',paddingLeft: 13,textDecoration: 'none'}}>Home</Link>
+                                </li>
+                                <li>
+                                    <Link onClick={this.submit} to="/Profile" style={{color: 'white',paddingLeft: 13,textDecoration: 'none'}}>Profile</Link>
+                                </li>
+                                <li>
+                                    <Link to="/Login" onClick={this.Logout} style={{color: 'white',paddingLeft: 13,textDecoration: 'none'}}>Logout</Link>
+                                </li>
+                                <li>
+                                    <Link onClick={this.submit} to="/image" style={{color: 'white',paddingLeft: 13,textDecoration: 'none'}}>UploadImage</Link>
+                                </li>
+                            </ul>
 
-          <div>
+                        </div>
+                    </center>
 
-              <nav className="navbar navbar-inverse">
-                  <div className="container-fluid">
-                      <div className="navbar-header">
-                          <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                              <span className="icon-bar"></span>
-                              <span className="icon-bar"></span>
-                              <span className="icon-bar"></span>
-                          </button>
+                </div>
+            </nav>
 
-                      </div>
-                      <center>
-                          <div className="collapse navbar-collapse" id="myNavbar">
-                              <ul className="nav navbar-nav">
-                                  <li>
-                                      <Link onClick={this.submit} to="/Home" style={{color: 'white',paddingLeft: 13,textDecoration: 'none'}}>Home</Link>
-                                  </li>
-                                  <li>
-                                      <Link onClick={this.submit} to="/Profile" style={{color: 'white',paddingLeft: 13,textDecoration: 'none'}}>Profile</Link>
-                                  </li>
-                                  <li>
-                                      <Link to="/Login" onClick={this.Logout} style={{color: 'white',paddingLeft: 13,textDecoration: 'none'}}>Logout</Link>
-                                  </li>
-                              </ul>
+            <div className="jumbotron">
+                <div className="container text-left">
+                    <h1>Second Hand Store</h1>
+                    <p>Reduce.Reuse.Recycle</p>
+                </div>
+            </div>
+            <div className="content">
 
-                          </div>
-                      </center>
+                <Route path="/Home" render={()=>
+                    <Home extraa={this.state.extra} name={this.props.name}/> } />
+                    <Route path="/Profile" render={()=>
+                        <Profile name={this.props.name} userPosts={this.state.myposts} rerender={this.submit}/> } />
 
-                  </div>
-              </nav>
+            </div>
 
-              <div className="jumbotron">
-                  <div className="container text-left">
-                      <h1>Second Hand Store</h1>
-                      <p>Reduce.Reuse.Recycle</p>
-                  </div>
-              </div>
-              <div className="content">
+        </div>
 
-                  <Route path="/Home" render={()=>
-                      <Home extraa={this.state.extra} name={this.props.name}/> } />
-                      <Route path="/Profile" render={()=>
-                          <Profile name={this.props.name} userPosts={this.state.myposts} rerender={this.submit}/> } />
-
-              </div>
-
-          </div>
-
-      </Router>
-  </div>
-    )
-
-}
-}
-
-
+    </Router>
+</div>
+) } }
 
 export default Account;
