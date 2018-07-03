@@ -55,6 +55,9 @@ npm run react-dev
 in another terminal npm run server-dev
 in another terminal npm run react-dev 
 ```
+### The Website
+https://reduce-ruse-recycle.herokuapp.com/
+
 ### The Demo video
 https://drive.google.com/file/d/1VeVqmas94oFdfr4QCfXj3X1rDn4PuUEq/view
 
