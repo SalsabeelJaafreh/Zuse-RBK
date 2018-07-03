@@ -4,7 +4,7 @@
 2- you have the chance also to sell your extra items instead of throughing them out 
 3- all the information in this app will be provided from people to people so don't worry all of them are practical. no theories here.
 
-## Team
+## LegacyTeam
 
   - __Product Owner__: Salsabeel Jaafreh
   - __Scrum Master__: Mohammad AlRifai
@@ -54,6 +54,8 @@ npm run react-dev
 in another terminal npm run server-dev
 in another terminal npm run react-dev 
 ```
+### The Demo video
+https://drive.google.com/file/d/1VeVqmas94oFdfr4QCfXj3X1rDn4PuUEq/view
 
 ### Roadmap
 
