@@ -1,275 +1,271 @@
-<!-- this is the main html page  jozaa-->
-
+<!-- this is the main html page-->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
 
-<!-- Latest compiled and minified CSS -->
+<head>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <!-- Optional theme -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+ integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+  <link href="https://fonts.googleapis.com/css?family=Armata" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+  </script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style>
+    .jumbotron {
+      background-image: url("https://alamon.com/wp-content/uploads/2017/05/1701-ESO-interior-banner-test2.png");
+      background-size: auto;
+      background-position: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: ;
+    }
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-crossorigin="anonymous">
+    #Contact {
+      margin-right: 50px;
+      margin-left: 50px
+    }
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    #Login {
+      margin-top: 80px;
+      padding-top: 50px;
+      height: 500px;
+      width: 450px;
+      border-radius: 25px;
+      background-color: #383838;
+    }
 
-<!-- Optional theme -->
-<!-- <link rel="stylesheet"
- href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
- integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
- crossorigin="anonymous"> -->
- <link href="https://fonts.googleapis.com/css?family=Armata" rel="stylesheet">
+    #Signup {
+      margin-top: 80px;
+      padding-top: 50px;
+      height: 500px;
+      width: 450px;
+      border-radius: 25px;
+      background-color: #383838;
+    }
 
- <script
-   src="https://code.jquery.com/jquery-3.3.1.min.js"
-   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-   crossorigin="anonymous">
- </script>
-<!-- Latest compiled and minified JavaScript -->
+    #Link2 {
+      font-family: sans-serif;
+      color: white;
+    }
 
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-          <style >
-         .jumbotron{
-          background-image:url("https://alamon.com/wp-content/uploads/2017/05/1701-ESO-interior-banner-test2.png");
-          background-size: auto;
-          background-position: center;
-           font-family: Arial, Helvetica, sans-serif;
-           font-style:;
-         }
-           #Contact{
-            margin-right: 50px;
-            margin-left: 50px
-           }
-            #Login{
-              margin-top:80px;
-              padding-top: 50px;
-              height:500px;
-              width: 450px;
-               border-radius: 25px;
-
-              background-color:#383838;
-            }
-             #Signup{
-              margin-top:80px;
-              padding-top: 50px;
-              height:500px;
-              width: 450px;
-               border-radius: 25px;
-
-              background-color:#383838;
-            }
-            #Link2{
-              font-family: sans-serif;
-              color: white;
-            }
-           #AboutUs{
-            margin-left: 50px;
-            margin-right: 50px;
-           }
+    #AboutUs {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
 
 
-            #app{
-              height:900px;
-              width: 100%;
-              font-family:Helvetica;
-              font-size: 20px;
+    #app {
+      height: 900px;
+      width: 100%;
+      font-family: Helvetica;
+      font-size: 20px;
+    }
 
-            }
-            #List{
-             margin-left:30px;
-              margin-top: 30px;
-               border-radius: 25px;
-              background-color: #A8A8A8;
-               height:300px;
-              width:300px;
-              float:left;
-            }
+    #List {
+      margin-left: 30px;
+      margin-top: 30px;
+      border-radius: 25px;
+      background-color: #A8A8A8;
+      height: 300px;
+      width: 300px;
+      float: left;
+    }
 
-          #AddSuggest{
-            width: 200px;
-            height:25px;
+    #AddSuggest {
+      width: 200px;
+      height: 25px;
+    }
 
-           }
-          #Signupinput1, #Signupinput2 ,#Signupinput3{
-            width: 200px;
-            height:25px;
-            background-color: #f6f0ff;
-             border-radius: 25px;
-             font-size: 15px;
-             text-align:center;
-          }
-          #Logininput1, #Logininput2{
-            width: 200px;
-            height:25px;
-            background-color: #f6f0ff;
-             border-radius: 25px;
-              font-size: 15px;
-               text-align:center;
-          }
-          #table{
-             height:100px;
-              width:100px;
-              text-align: center;
-            }
+    #Signupinput1,
+    #Signupinput2,
+    #Signupinput3 {
+      width: 200px;
+      height: 25px;
+      background-color: #f6f0ff;
+      border-radius: 25px;
+      font-size: 15px;
+      text-align: center;
+    }
 
-          #submit{
-            background: linear-gradient(#ffffff,#d9ffb3);
-            border-radius: 5px;
-          }
-          #signupbutton{
-           width: 100px;
-            height:25px;
+    #Logininput1,
+    #Logininput2 {
+      width: 200px;
+      height: 25px;
+      background-color: #f6f0ff;
+      border-radius: 25px;
+      font-size: 15px;
+      text-align: center;
+    }
 
-             border-radius: 25px;
-             font-size:15px;
+    #table {
+      height: 100px;
+      width: 100px;
+      text-align: center;
+    }
 
-          }
-          #signinbutton{
-           width: 100px;
-            height:40px;
+    #submit {
+      background: linear-gradient(#ffffff, #d9ffb3);
+      border-radius: 5px;
+    }
 
-             border-radius: 25px;
-             font-size:20px;
+    #signupbutton {
+      width: 100px;
+      height: 25px;
+      border-radius: 25px;
+      font-size: 15px;
+    }
 
-          }
+    #signinbutton {
+      width: 100px;
+      height: 40px;
+      border-radius: 25px;
+      font-size: 20px;
+    }
 
-            #welcome{
-            height:500px;
-            width:1000px;
-            border-radius: 25px;
-            background-color: #A8A8A8;
-            padding-top: 50px;
-          }
+    #welcome {
+      height: 500px;
+      width: 1000px;
+      border-radius: 25px;
+      background-color: #A8A8A8;
+      padding-top: 50px;
+    }
 
-         #homehome{
-                 margin-left:30px;
-              margin-top: 30px;
-               border-radius: 25px;
-              background-color: #A8A8A8;
-               height:300px;
-              width:300px;
-              float:left;
-              }
+    #homehome {
+      margin-left: 30px;
+      margin-top: 30px;
+      border-radius: 25px;
+      background-color: #A8A8A8;
+      height: 300px;
+      width: 300px;
+      float: left;
+    }
 
-             #profile1,#profile2{
-              margin-top:80px;
-              padding-top: 50px;
-              height:400px;
-              border-radius: 25px;
-              text-align: center;
+    #profile1,
+    #profile2 {
+      margin-top: 80px;
+      padding-top: 50px;
+      height: 400px;
+      border-radius: 25px;
+      text-align: center;
+      width: 500px;
+      font-family: "Times New Roman", Georgia, serif;
 
-              width:500px;
-               font-family: "Times New Roman", Georgia, serif;
+    }
 
-             }
-              #table2{
-           /* background-color: #A8A8A8;*/
+    #table2 {
+      /* background-color: #A8A8A8;*/
+      font-size: 30px;
+      font-family: "Times New Roman", Georgia, serif;
+    }
 
-             font-size: 30px;
-              font-family: "Times New Roman", Georgia, serif;
-            }
-            .pre{
-              border-style: solid;
-              border-radius:  10px;
-              background:#90A4AE;
-              font-family: "Times New Roman", Georgia, serif;
-              font-size: 100%;
-            }
+    .pre {
+      border-style: solid;
+      border-radius: 10px;
+      background: #90A4AE;
+      font-family: "Times New Roman", Georgia, serif;
+      font-size: 100%;
+    }
 
-            .pad{
-              border-color: #455A64;
-              background-color: #149c82;
-              border-radius: 15px 50px;
-              color: black;
-              padding: 50px;
-            }
+    .pad {
+      border-color: #455A64;
+      background-color: #149c82;
+      border-radius: 15px 50px;
+      color: black;
+      padding: 50px;
+    }
 
-            .fon{
-              font-size: 150%
-            }
+    .fon {
+      font-size: 150%
+    }
 
-            .gfont{
-              font-family: 'Armata', sans-serif;
+    .gfont {
+      font-family: 'Armata', sans-serif;
+    }
 
-            }
+    .half-rule {
+      margin-left: 0;
+      text-align: left;
+      width: 50%;
+    }
 
-            .half-rule {
-    margin-left: 0;
-    text-align: left;
-    width: 50%;
- }
-          .bg{
-            background: linear-gradient(to top, #ada996, #f2f2f2, #dbdbdb, white); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    .bg {
+      background: linear-gradient(to top, #ada996, #f2f2f2, #dbdbdb, white);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
 
-          }
-          .divider{
-            height:6px;
-          }
+    .divider {
+      height: 6px;
+    }
 
-            #tab{
+    #tab {
+      margin-top: 50px;
+    }
 
-              margin-top:50px;
-            }
+    #AddSuggesttextarea {
+      border-radius: 10px;
+      font-size: 15px;
+      text-align: center;
+    }
 
-            #AddSuggesttextarea{
-            border-radius: 10px;
-             font-size:15px;
-             text-align: center;
-            }
-            #line{
-              font-family:bold;
-              font-size: 30px;
-            }
-            #message1{
-              border-radius: 25px;
+    #line {
+      font-family: bold;
+      font-size: 30px;
+    }
 
-              text-align: center;
-            }
-            #home{
-              border-radius: 10px;
-             font-size:20px;
-             text-align: center;
-            text-align: center;
-            }
-            #home1{
-            width: 50px;
-            height:20px;
-            background-color: #f2e6d9 ;
-             border-radius: 5px;
-             font-size: 15px;
-            text-align: center;
-            }
-            #like {
-              margin-left:10px;
-              box-shadow: 0 0 22px 4px rgba(0,0,0,0.1);
-              height: 40px;
-              width: 200px;
-              transition: box-shadow 0.3s;
-              &:hover {
-                 box-shadow: 3px 3px 22px 4px rgba(0,0,0,0.1);
-  }
-  #suggestionPre{
-    width:600px;
-    height:1100px;
-  }
-}
-  body{
-    font-family: 'Armata', sans-serif;
-  }
-          </style>
+    #message1 {
+      border-radius: 25px;
+      text-align: center;
+    }
 
+    #home {
+      border-radius: 10px;
+      font-size: 20px;
+      text-align: center;
+      text-align: center;
+    }
 
+    #home1 {
+      width: 50px;
+      height: 20px;
+      background-color: #f2e6d9;
+      border-radius: 5px;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    #like {
+      margin-left: 10px;
+      box-shadow: 0 0 22px 4px rgba(0, 0, 0, 0.1);
+      height: 40px;
+      width: 200px;
+      transition: box-shadow 0.3s;
+      &:hover {
+        box-shadow: 3px 3px 22px 4px rgba(0, 0, 0, 0.1);
+      }
+      #suggestionPre {
+        width: 600px;
+        height: 1100px;
+      }
+    }
+
+    body {
+      font-family: 'Armata', sans-serif;
+    }
+  </style>
   <title>Recycling</title>
 </head>
+
 <body>
-<div id="app"></div>
-<script type="text/javascript" src="bundle.js"></script>
-
+  <div id="app"></div>
+  <script type="text/javascript" src="bundle.js"></script>
 </body>
-
 
 </html>
