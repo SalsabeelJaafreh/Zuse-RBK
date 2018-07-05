@@ -1,13 +1,12 @@
-var mongoose = require('mongoose');
-var db = require('./config');
+var mongoose = require('mongoose')
 //Messages for second hand shop stuff, in order to contact the donar.
 var message = mongoose.Schema({
-	From: { type : String, required : true },
-	to: { type : String, required : true },
-	content:{ type : String, required : true }
-});
+    From: { type : String, required : true },
+    to: { type : String, required : true },
+    content:{ type : String, required : true }
+})
 
 
-var Message = mongoose.model('Message', message);
+var Message = mongoose.model('Message', message)
 
-module.exports= Message;
+module.exports= Message
