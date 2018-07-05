@@ -1,16 +1,15 @@
-var mongoose=require ('mongoose');
-var db = require('./config');
+var mongoose=require ('mongoose')
 //Second hand shop stuff posts.
 var stuff = mongoose.Schema({
-	name: { type : String, required : true },
-	select: { type : String, required : true },
-	post:{ type : String, required : true }
-});
+    name: { type : String, required : true },
+    select: { type : String, required : true },
+    post:{ type : String, required : true }
+})
 
 
-var Stuff = mongoose.model('Stuff', stuff);
+var Stuff = mongoose.model('Stuff', stuff)
 
 
 
 
-module.exports = Stuff;
+module.exports = Stuff
