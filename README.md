@@ -85,6 +85,8 @@ in another terminal npm run react-dev
 
 > Some usage instructions:
 
+- Signup and Login, then share your knowledge and ideas about recycling, and discover new ones. 
+
 
 ## Deployment:
 
