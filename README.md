@@ -12,9 +12,10 @@
 
 ## Team:
 
-    Product Owner: [Wa'ed Alshiyyab](https://github.com/Waed93)
-    Scrum Master: [Hanan Nouman](https://github.com/HananNouman)
-    Development Team Members: [Lena Salamat](https://github.com/lenaSalamat), [Yussur Alani](https://github.com/Yussur90)
+   - __Product Owner__: [Wa'ed Alshiyyab](https://github.com/Waed93)
+   - __Scrum Master__: [Hanan Nouman](https://github.com/HananNouman)
+   - __Development Team Members__: [Lena Salamat](https://github.com/lenaSalamat), [Yussur Alani](https://github.com/Yussur90)
+
 
 ## The Legacy Team:
 
