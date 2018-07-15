@@ -2,6 +2,8 @@
 
 ## Description:
 
+This is a project that was developed by a different team and then worked on by the Legacy team to add more features and improve the code.
+
 >  ReduceRuseRecycle is a great optimal solution from two different sides:
 
 1- it gives you the oppurtinity to contribute with your suggestion and idea about recycling so all people can use your knowledge in a good way.
@@ -10,7 +12,7 @@
 
 3- all the information in this app will be provided from people to people so don't worry all of them are practical. no theories here.
 
-## Team:
+## Original Team:
 
    - __Product Owner__: [Wa'ed Alshiyyab](https://github.com/Waed93)
    - __Scrum Master__: [Hanan Nouman](https://github.com/HananNouman)
@@ -23,12 +25,12 @@
   - __Scrum Master__: [Mohammad AL Rifai](https://github.com/MohammadAlRifai)
   - __Development Team Members__: [Mohammad Jozaa](https://github.com/MohammadJozaa7), [Belal Faouri](https://github.com/BelalFaouri)
 
- 
-## Features:
 
--  Restyling the whole project beacause we think that old style it need to be more colorful.
--  Added new tab with name "DidYouKnow" that contains alot of info that encourage the user to recycling.
--  Added new tab with name "videos" that teach the users different ways of recycling items .
+## Added Features:
+
+-  Restyling the whole project beacause we think that old style need to be more colorful.
+-  Added new tab with name "DidYouKnow" that contains info that encourages the user to recycle.
+-  Added new tab with name "videos" that teach the users different ways of recycling items.
 -  Fixing some bugs that related to our features we added likes(route of login ,likes count).
 -  Adding the project name to heroku link.
 
@@ -54,12 +56,12 @@
 
 - Node v6.14.1
   Express framwork
-- MongoDB 
-- reactJS 
+- MongoDB
+- reactJS
 
 ## Development:
 
-   Development of this app started on April 29, 2018 and the final app was 
+   Development of this app started on April 29, 2018 and the final app was
    deployed on Heroku on May 3, 2018.
 
 ###### Installing Dependencies & Running App:
@@ -69,23 +71,23 @@ Clone the repo or download it.
 Run your mongoDB database from your commander
 
 ```sh
-mongod 
+mongod
 ```
-     
+
 From inside the repo directory:
 
 ```sh
 npm install
 npm run react-dev
 in another terminal npm run server-dev
-in another terminal npm run react-dev 
+in another terminal npm run react-dev
 ```
 
 ## Usage:
 
 > Some usage instructions:
 
-- Signup and Login, then share your knowledge and ideas about recycling, and discover new ones. 
+- Signup and Login, then share your knowledge and ideas about recycling, and discover new ones.
 
 
 ## Deployment:
