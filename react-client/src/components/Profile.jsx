@@ -14,7 +14,6 @@ class Profile extends Component {
       content: '',
       message: [],
       showInbox: false,
-      // image:"http://s3.amazonaws.com/37assets/svn/765-default-avatar.png"
     };
     this.submit = this.submit.bind(this);
     this.onChange = this.onChange.bind(this);
@@ -29,7 +28,8 @@ class Profile extends Component {
       [e.target.name]: e.target.value
     });
   }
-  // you can either add add not used stuff post or recycling idea
+
+ 
   submit(select, post) {
     $.ajax({
       type: 'POST',

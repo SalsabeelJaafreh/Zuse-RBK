@@ -21,7 +21,6 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      //The code will depend on the data value which will be set through successful ajax to decide what to render.
       dataa: "",
       showAboutUsComponent: false,
       showProductsComponent: false,
@@ -115,6 +114,7 @@ class App extends Component {
     }
   }
 }
+
 //The Main componant can be put in different file like the Contact,AboutUs..etc.
 class Main extends Component {
   constructor(props) {

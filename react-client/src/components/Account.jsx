@@ -21,6 +21,7 @@ class Account extends Component {
     this.submit = this.submit.bind(this);
     this.Logout = this.Logout.bind(this);
   }
+
   // when the user clicks on the profile/home buttons states will be set with data.
   submit() {
     $.ajax({
@@ -54,7 +55,7 @@ class Account extends Component {
             <nav className="navbar navbar-inverse">
               <div className="container-fluid">
                 <div className="navbar-header">
-                  <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <button className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>

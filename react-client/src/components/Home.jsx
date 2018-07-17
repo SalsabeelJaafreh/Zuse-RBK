@@ -23,6 +23,7 @@ class Home extends Component {
       [e.target.name]: e.target.value
     });
   }
+  
   // if any user can reuse any stuff he can press on the donar name and message him.
   showmessagebox(to, content) {
     this.setState({

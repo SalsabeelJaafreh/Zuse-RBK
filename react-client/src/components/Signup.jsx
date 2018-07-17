@@ -48,6 +48,7 @@ class Signup extends Component {
     });
   }
 
+
   render() {
     //log in page
     if (this.state.data !== "") {
@@ -57,6 +58,7 @@ class Signup extends Component {
         </Router>
       )
     }
+    
     //sign up page
     else {
       return (
